@@ -1,0 +1,63 @@
+/* mixin */
+@mixin sizes-queesurbex ($width,$height){
+    height: $height;
+    width: $width;
+}
+
+.img1{
+    @include sizes-queesurbex (300px,300px);
+}
+
+.img2{
+    @include sizes-queesurbex (300px,300px);
+}
+
+.img3{
+    @include sizes-queesurbex (300px,300px);
+}
+
+@mixin sizes-administradores($width,$height) {
+    height: $height;
+    width: $width;
+}
+
+.img-admin1{
+    @include sizes-administradores (200px,200px);
+}
+
+.img-admin2{
+    @include sizes-administradores (200px,200px);
+}
+
+.img-admin3{
+    @include sizes-administradores (200px,200px);
+}
+
+/* extend */
+.bordes-queesurbex{
+    border: 3px solid gray;
+}
+
+.img1{
+    @extend .bordes-queesurbex;
+}
+
+.img2{
+    @extend .bordes-queesurbex;
+}
+
+.img3{
+    @extend .bordes-queesurbex;
+}
+
+.img-admin1{
+    @extend .bordes-queesurbex;
+}
+
+.img-admin2{
+    @extend .bordes-queesurbex;
+}
+
+.img-admin3{
+    @extend .bordes-queesurbex;
+}
