@@ -240,7 +240,6 @@ body {
 
 form {
   width: 100%;
-  max-width: 600px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -248,7 +247,7 @@ form {
   align-items: center;
 }
 
-.grilla-form {
+.main-contacto {
   max-width: 700px;
   margin: 0 auto;
 }
@@ -296,10 +295,6 @@ footer div {
 
 /* declaro las grid área */
 /*HTML adminstradores */
-header {
-  grid-area: header;
-}
-
 .h1-admin {
   grid-area: h1-admin;
 }
@@ -317,6 +312,10 @@ footer {
 }
 
 /*HTML contacto */
+.comu {
+  grid-area: comu;
+}
+
 .nom {
   grid-area: nom;
 }
@@ -337,19 +336,25 @@ footer {
   grid-area: textarea;
 }
 
-.grilla-form {
-  display: grid;
-  grid-template-areas: "nom" "ape" "email" "tipo" "textarea" "boton";
-}
-
 @media (min-width: 576px) {
   body {
     background-color: antiquewhite;
   }
-  .grilla-form {
-    display: grid;
-    grid-template-areas: "header header" "" "nom   ape" "email tipo" "textarea textarea" "boton    .";
-    grid-template-columns: 2fr 2fr;
+  .grid {
+    display: flex;
+    flex-direction: row;
+    margin-left: 0;
+    margin-top: 5px;
+  }
+  .lista-vecinos {
+    float: left;
+    width: 40%;
+  }
+  .img-vecinos {
+    margin-right: 25px;
+    width: 300px;
+    height: 200px;
+    float: right;
   }
   form {
     display: inline-block;
@@ -358,6 +363,37 @@ footer {
 @media (min-width: 768px) {
   body {
     background-color: lightgrey;
+  }
+  footer {
+    background-color: rgb(45, 99, 182);
+    padding: 1.5em;
+    margin-bottom: 0;
+  }
+  .footer1 {
+    padding-right: 0px;
+    padding-left: 0px;
+    float: left;
+    padding-bottom: 0px;
+    width: 100%;
+    padding-top: 0px;
+    list-style-type: none;
+  }
+  .footer1 li {
+    padding-right: 2px;
+    display: inline;
+    padding-left: 2px;
+    float: left;
+    padding-bottom: 2px;
+    width: 50%;
+    padding-top: 2px;
+    color: white;
+  }
+  .footer1 li a {
+    color: white;
+    list-style-type: none;
+    text-decoration: none;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
   }
 }
 @media (min-width: 992px) {
@@ -420,42 +456,33 @@ footer {
     margin-top: 20px;
     margin-left: 50px;
   }
-  .capa-admin {
+  .main-admin {
     display: grid;
-    grid-template-areas: "header   header" "h1-admin ." "pf-img   img-admin" "footer   footer";
-    grid-template-columns: 3fr 1fr;
+    grid-template-areas: "h1-admin h1-admin" "pf-img   img-admin" "pf-img   img-admin" "pf-img   img-admin" "footer   footer";
+    grid-template-columns: 2fr 1fr;
   }
-  form {
+  .vecinos {
+    list-style-type: disc;
     font-size: 20px;
     display: inline-block;
+    align-content: left;
+    margin: 0px 6px;
     color: black;
-    font-family: roboto, "sans-serif";
-    margin-left: 300px;
-    margin-bottom: 40px;
-    width: 600px;
+    height: 500px;
+    font-family: raleway, "sans-serif";
   }
   .comu {
     padding: 10px;
     margin-top: 10px;
-    margin-left: 300px;
   }
-  .nom {
-    font-size: 20px;
-    display: inline-block;
-    color: black;
-    font-family: roboto, "sans-serif";
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 30px;
+  .lista-vecinos {
+    margin-left: 65px;
   }
-  .email {
-    font-size: 20px;
-    display: inline-block;
-    color: black;
-    font-family: roboto, "sans-serif";
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 30px;
+  .img-vecinos {
+    margin-right: 25px;
+    width: 600px;
+    height: 500px;
+    float: right;
   }
   footer {
     background-color: rgb(45, 99, 182);

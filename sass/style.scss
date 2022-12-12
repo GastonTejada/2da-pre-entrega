@@ -156,6 +156,7 @@ body{
 
 .img-admin1{
     margin: 10px 10px 10px 10px;
+
 }
 
 .img-admin2{
@@ -175,15 +176,14 @@ body{
 
 form{
     width: 100%;
-    max-width: 600px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
 }
 
-.grilla-form{
+.main-contacto{
     max-width:700px;
     margin: 0 auto;
 }
@@ -232,10 +232,6 @@ footer div{
 
 /* declaro las grid área */
 /*HTML adminstradores */
-header{
-    grid-area: header;
-}
-
 .h1-admin{
     grid-area: h1-admin;
 }
@@ -253,6 +249,9 @@ footer{
 }
 
 /*HTML contacto */
+.comu{
+    grid-area: comu;
+}
 .nom{
     grid-area: nom;
 }
@@ -273,39 +272,35 @@ footer{
     grid-area: textarea;
 }
 
-.grilla-form{
-    display: grid;
-    grid-template-areas:
-    "nom"
-    "ape"
-    "email"
-    "tipo"
-    "textarea"
-    "boton";
-}
-
 @media(min-width:576px){
 
     body{
         background-color: $color3;
     }
 
-    .grilla-form{
-        display: grid;
-        grid-template-areas:
-        "header header"
-        ""
-        "nom   ape"
-        "email tipo"
-        "textarea textarea"
-        "boton    .";
-        grid-template-columns: 2fr 2fr;
+
+    .grid{    
+        display: flex;
+        flex-direction: row;
+        margin-left: 0;
+        margin-top: 5px;  
+    }
+
+    .lista-vecinos{
+        float:left;
+        width: 40%;        
+    }
+
+    .img-vecinos{
+        margin-right: 25px; 
+        width:300px;
+        height:200px;
+        float:right;
     }
 
     form{
         display: inline-block;
     }
-
 
 }
 
@@ -314,7 +309,42 @@ body{
     background-color: $color4;
     }
 
-
+    footer{
+        background-color: rgb(45, 99, 182);
+        padding: 1.5em;
+        margin-bottom: 0;
+    }
+    
+    .footer1
+    {
+        padding-right: 0px;
+        padding-left: 0px;
+        float: left;
+        padding-bottom: 0px;
+        width: 100%;
+        padding-top: 0px;
+        list-style-type: none;
+    }
+    
+    .footer1 li
+    {
+        padding-right: 2px;
+        display: inline;
+        padding-left: 2px;
+        float: left;
+        padding-bottom: 2px;
+        width: 50%;
+        padding-top: 2px;
+        color: $color2;
+    }
+    
+    .footer1 li a{
+        color: white;
+        list-style-type: none;
+        text-decoration: none;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
     
 }
 
@@ -349,133 +379,86 @@ body{
         transform: scaleX(1);
     }
 
-.titulo1{    
-    margin-left: 6rem;
-    margin-top: 5px;
-}
+    .titulo1{    
+        margin-left: 6rem;
+        margin-top: 5px;
+    }
 
-p{
-    font-size: 20px;
-}
+    p{
+        font-size: 20px;
+    }
 
-.parrafo-index{    
-    margin-left: 6rem;
-    width: 85%;
-}
+    .parrafo-index{    
+        margin-left: 6rem;
+        width: 85%;
+    }
 
-.h1-queesurbex{
-    padding-top: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 70px;
-}
+    .h1-queesurbex{
+        padding-top: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 70px;
+    }
 
-.p-1{
-    margin-left: 70px;
-    width: 90%;
-}
+    .p-1{
+        margin-left: 70px;
+        width: 90%;
+    }
 
-.h2-queesurbex h2{
-    margin-left: 70px;
-    color:black;
-}
+    .h2-queesurbex h2{
+        margin-left: 70px;
+        color:black;
+    }
 
-.p-11{
-    margin-left: 70px;
-    width: 90%;
-}
+    .p-11{
+        margin-left: 70px;
+        width: 90%;
+    }
 
-.h1-admin{
-    padding-top: 20px;
-    margin-top: 20px;
-    margin-left: 50px;
-}
+    .h1-admin{
+        padding-top: 20px;
+        margin-top: 20px;
+        margin-left: 50px;
+    }
 
-// .pf-img{
-//     display: flex;    
-//     flex-direction: column;
-//     width: 70%;
-// }
+    .main-admin{
+        display: grid;
+        grid-template-areas:        
+        "h1-admin h1-admin"
+        "pf-img   img-admin"    
+        "pf-img   img-admin"    
+        "pf-img   img-admin"    
+        "footer   footer";
+        grid-template-columns: 2fr 1fr;
+    }
 
-// .pf-admin{    
-//     align-items: flex-start;
-//     justify-content:left;
-// //    width: 800px;    
-//     margin-left: 50px;
-//     font-size: 18px;        
-// }
-
-// .img-admin{
-//     object-fit: cover;
-//     display: flex;    
-//     flex-direction: column;
-// //    flex-wrap: nowrap;
-//     align-items: flex-end;
-//     justify-content:right;
-//     margin-left: 50px;    
-//     margin-right: 50px; 
-//     width: 25%;
-// }
-
-
-.capa-admin{
-    display: grid;
-    grid-template-areas:
-    "header   header"
-    "h1-admin ."
-    "pf-img   img-admin"    
-    "footer   footer";
-    grid-template-columns: 3fr 1fr;
-}
-
-//     .vecinos p{
-//         margin-top: 1rem;
-//         margin-right: 3rem;
-//         margin-bottom: 3rem;
-//         margin-left: 3rem;
-//         font-size: 25px;
-//     }
-
-    form{
+    .vecinos{
+        list-style-type: disc;
         font-size: 20px;
         display: inline-block;
+        align-content: left;
+        margin: 0px 6px;
         color: black;
-        font-family: roboto, "sans-serif";
-        margin-left: 300px;
-        margin-bottom: 40px;
-        width: 600px;
+        height: 500px;
+        font-family: raleway, "sans-serif"; 
     }
 
     .comu{
         padding: 10px;
         margin-top: 10px;
-        margin-left: 300px;
+    //     margin-left: 300px;
     }
     
-    .nom{
-        font-size: 20px;
-        display: inline-block;
-        color: black;
-        font-family: roboto, "sans-serif";
-        margin-top: 10px;
-        margin-bottom: 10px;
-        margin-left: 30px;
-    }
-    
-    .email{
-        font-size: 20px;
-        display: inline-block;
-        color: black;
-        font-family: roboto, "sans-serif";
-        margin-top: 10px;
-        margin-bottom: 10px;
-        margin-left: 30px;
+    .lista-vecinos{
+        margin-left: 65px;        
     }
 
-    // .textarea{
-    //     resize: horizontal;
-    // }
-
+    .img-vecinos{
+        margin-right: 25px; 
+        width:600px;
+        height:500px;
+        float:right;
+    }
 
     footer{
         background-color: rgb(45, 99, 182);
@@ -517,6 +500,7 @@ p{
 }
 
 @media (min-width:1200px){
+
     footer{
         background-color: $color1;
         display: flex;    
