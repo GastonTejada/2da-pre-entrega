@@ -4,44 +4,11 @@
 @import "operaciones";
 
 /* Mobile First */
-header{
-    background-color: $color1;
-    font-weight: 400;
-    line-height: 1.5;
-    display: block;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 11;
-}
-
-.flex-header{
-    background-color: $color1;
-    display: flex;
-    flex-direction: row;
-    align-items:center;
-    justify-content:flex-start;
-    color: white;
-    font-size: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;    
-}
-
-body{
-    background-color: white;
-    font-family: 'roboto',sans-serif;
-    text-align: left;
-    font-weight: bolder;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
 .carrousel{
     position: relative;
     padding: 0;
     zoom: 1;
+    max-height: 425px;
 }
 
 .carrousel img{
@@ -155,16 +122,53 @@ body{
 }
 
 .img-admin1{
-    margin: 10px 10px 10px 10px;
+    margin: $margin-admin;
 
 }
 
 .img-admin2{
-    margin: 10px 10px 10px 10px;
+    margin: $margin-admin;
 }
 
 .img-admin3{
-    margin: 10px 10px 10px 10px;    
+    margin: $margin-admin;    
+}
+
+.cont-vecinos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.col{
+    justify-content: center;
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+.row{
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.card{
+    flex-wrap: wrap;    
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.vecinos{
+    width: 15rem;
 }
 
 .comu{
@@ -284,18 +288,6 @@ footer{
         flex-direction: row;
         margin-left: 0;
         margin-top: 5px;  
-    }
-
-    .lista-vecinos{
-        float:left;
-        width: 40%;        
-    }
-
-    .img-vecinos{
-        margin-right: 25px; 
-        width:300px;
-        height:200px;
-        float:right;
     }
 
     form{
@@ -432,6 +424,10 @@ body{
         grid-template-columns: 2fr 1fr;
     }
 
+    .cont-vecinos{    
+        justify-content: space-around;    
+    }
+
     .vecinos{
         list-style-type: disc;
         font-size: 20px;
@@ -448,15 +444,8 @@ body{
         margin-top: 10px;
     }
     
-    .lista-vecinos{
-        margin-left: 65px;        
-    }
-
-    .img-vecinos{
-        margin-right: 25px; 
-        width:600px;
-        height:500px;
-        float:right;
+    .main-vecinos .container{
+        max-width: 100%;
     }
 
     footer{
@@ -500,6 +489,10 @@ body{
 
 @media (min-width:1200px){
 
+    .navbar .container{
+        max-width: 80%;
+    }
+
     footer{
         background-color: $color1;
         display: flex;    
@@ -514,7 +507,7 @@ body{
         background-color: $color1;
         padding: 3rem;    
     }
-    
+
     .footer1{
         display: flex;    
         flex-wrap: wrap;
